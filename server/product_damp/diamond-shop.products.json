@@ -1,0 +1,156 @@
+[{
+  "_id": {
+    "$oid": "680cd260e955b7532f55567f"
+  },
+  "id": 1,
+  "name": "Кольцо с бриллиантом",
+  "price": 45600,
+  "category": "Кольца",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/6015028.jpg",
+  "description": "Элегантное кольцо из белого золота с бриллиантом 0.5 карат. Идеально для помолвки.",
+  "material": "Белое золото 585 пробы",
+  "weight": 3.2
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555680"
+  },
+  "id": 2,
+  "name": "Серьги-гвоздики с сапфиром",
+  "price": 28900,
+  "category": "Серьги",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/3021673%D1%81%D0%BA.jpg",
+  "description": "Минималистичные серьги с натуральным сапфиром. Подходят для повседневной носки.",
+  "material": "Жёлтое золото 585 пробы",
+  "weight": 1.8
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555681"
+  },
+  "id": 3,
+  "name": "Подвеска «Сердце»",
+  "price": 32400,
+  "category": "Подвески",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/035602.jpg",
+  "description": "Романтичная подвеска в форме сердца с россыпью мелких бриллиантов.",
+  "material": "Розовое золото 585 пробы",
+  "weight": 2.5
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555682"
+  },
+  "id": 4,
+  "name": "Браслет «Талисман»",
+  "price": 67800,
+  "category": "Браслеты",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/051201.jpg",
+  "description": "Гибкий браслет с подвесками-символами: подкова, ключ и солнце.",
+  "material": "Серебро 925 пробы с позолотой",
+  "weight": 12
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555683"
+  },
+  "id": 5,
+  "name": "Комплект «Нежность»",
+  "price": 115000,
+  "category": "Комплекты",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/815102-%D0%B3.jpg",
+  "description": "Набор: кольцо и серьги с жемчугом и бриллиантами. Лимитированная коллекция.",
+  "material": "Белое золото 585 пробы",
+  "weight": 8.7
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555684"
+  },
+  "id": 6,
+  "name": "Кольцо «Винтаж»",
+  "price": 38700,
+  "category": "Кольца",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/114110-01.jpg",
+  "description": "Антикварное кольцо с александритом. Меняет цвет при разном освещении.",
+  "material": "Жёлтое золото 750 пробы",
+  "weight": 4.1
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555685"
+  },
+  "id": 7,
+  "name": "Серьги-кисточки",
+  "price": 24100,
+  "category": "Серьги",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/027090.jpg",
+  "description": "Лёгкие серьги с подвижными элементами. Украшены фианитами.",
+  "material": "Серебро 925 пробы",
+  "weight": 2.3
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555686"
+  },
+  "id": 8,
+  "name": "Подвеска «Древо жизни»",
+  "price": 29500,
+  "category": "Подвески",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/034934.jpg",
+  "description": "Символичный кулон с эмалевыми вставками. Длина цепочки — 45 см.",
+  "material": "Жёлтое золото 585 пробы",
+  "weight": 3
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555687"
+  },
+  "id": 9,
+  "name": "Колье «Роял»",
+  "price": 142000,
+  "category": "Колье",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/1070131.jpg",
+  "description": "Роскошное колье с бриллиантами и рубинами. Ручная работа.",
+  "material": "Платина, бриллианты, рубины",
+  "weight": 22.5
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555688"
+  },
+  "id": 10,
+  "name": "Обручальное кольцо",
+  "price": 52800,
+  "category": "Кольца",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/114110-01.jpg",
+  "description": "Классическое обручальное кольцо с матовой поверхностью.",
+  "material": "Белое золото 585 пробы",
+  "weight": 3.8
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f555689"
+  },
+  "id": 11,
+  "name": "Серьги «Луна»",
+  "price": 35600,
+  "category": "Серьги",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/94023965.jpg",
+  "description": "Серьги в форме полумесяца с гравировкой. Комплект с футляром.",
+  "material": "Розовое золото 585 пробы",
+  "weight": 2.9
+},
+{
+  "_id": {
+    "$oid": "680cd260e955b7532f55568a"
+  },
+  "id": 12,
+  "name": "Браслет «Infinity»",
+  "price": 49800,
+  "category": "Браслеты",
+  "image": "https://diamant-online.ru/assets/thumbnail/283x283/uploads/shop/93050125.jpg",
+  "description": "Изящный браслет с символом бесконечности, инкрустированный бриллиантами.",
+  "material": "Белое золото 585 пробы",
+  "weight": 6.4
+}]
