@@ -1,15 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const Product = require('../models/Product'); // Убрал .default.default
+const Product = require('../models/Product'); 
 
-// Получить все товары (с поиском)
 router.get('/', async (req, res) => {
   try {
     const { search, category } = req.query;
     let query = {};
 
     if (search) {
-      query.name = { $regex: search, $options: 'i' }; // Поиск по названию
+      query.name = { $regex: search, $options: 'i' };
     }
 
     if (category && category !== 'Все') {
@@ -17,7 +16,7 @@ router.get('/', async (req, res) => {
     }
 
     console.log('Выполняем запрос с параметрами:', query);
-    const products = await Product.find(query); // Используем query здесь
+    const products = await Product.find(query);
     console.log('Найдено товаров:', products.length);
     
     res.json(products);
@@ -30,10 +29,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Получить товар по ID
 router.get('/:id', async (req, res) => {
   try {
-    const product = await Product.findOne({ id: req.params.id }); // Используем числовой id вместо _id
+    const product = await Product.findOne({ id: req.params.id }); 
     
     if (!product) {
       return res.status(404).json({ message: 'Товар не найден' });

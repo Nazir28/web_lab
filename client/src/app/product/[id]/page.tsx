@@ -3,17 +3,19 @@
 import { useState, useEffect } from 'react';
 import { FaShoppingCart, FaHeart, FaStar } from 'react-icons/fa';
 import { Product } from '../../catalog/page';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
 import { useCart } from '@/widget/cart';
+import { useAuth } from '@/widget/auth';
 
 export default function ProductDetail() {
     const { id } = useParams<{ id: string }>();
-    console.log(id);
     const [product, setProduct] = useState<Product | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const { addToCart, openCart } = useCart();
+    const { isAuthenticated } = useAuth();
+    const router = useRouter();
 
     useEffect(() => {
         if (!id) return;
@@ -34,6 +36,7 @@ export default function ProductDetail() {
 
     const handleAddToCart = () => {
         if (product === null) return;
+        if (!isAuthenticated) return router.push('/auth');
         addToCart({
             id: product.id.toString(),
             name: product.name,

@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors');
 const productRoutes = require('./routes/product');
 const cartRoutes = require('./routes/cartRoute');
+const userRoute = require('./routes/userRoute');
 const PORT = process.env.PORT || 2000
 
 const app = express()
@@ -11,6 +12,7 @@ app.use(cors());
 app.use(express.json())
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
+app.use('/api/user', userRoute);
 
 
 

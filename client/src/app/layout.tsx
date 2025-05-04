@@ -5,6 +5,7 @@ import { Header } from '@/widget/header';
 import { Footer } from '@/widget/footer';
 import { CartProvider } from '@/widget/cart/store';
 import CartModal from '@/widget/cart/modal';
+import { AuthProvider } from '@/widget/auth';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -29,12 +30,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <CartProvider>
-                    <Header />
-                    <CartModal />
-                    {children}
-                    <Footer />
-                </CartProvider>
+                <AuthProvider>
+                    <CartProvider>
+                        <Header />
+                        <CartModal />
+                        {children}
+                        <Footer />
+                    </CartProvider>
+                </AuthProvider>
             </body>
         </html>
     );

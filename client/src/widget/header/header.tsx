@@ -4,12 +4,14 @@ import Link from 'next/link';
 import React from 'react';
 import { CgShoppingCart } from 'react-icons/cg';
 import { useCart } from '../cart';
+import { useAuth } from '../auth';
+import { BiLogIn, BiLogOut } from 'react-icons/bi';
 
 export const Header = () => {
     const { totalItems, openCart } = useCart();
-
+    const { isAuthenticated, logout } = useAuth();
     return (
-        <header className="bg-slate-300 py-4">
+        <header className="bg-gray-00 py-4">
             <div className="max-w-[1200px] mx-auto flex justify-between items-center">
                 <Link href={'/'} className="cursor-pointer">
                     <Image
@@ -29,19 +31,34 @@ export const Header = () => {
                     <li className="text-xl hover:text-indigo-600">
                         <Link href={'/contacts'}>Контакты</Link>
                     </li>
+                    {isAuthenticated && (
+                        <li className="text-xl hover:text-indigo-600">
+                            <button
+                                onClick={openCart}
+                                className="relative p-2 text-gray-700 hover:text-indigo-600 cursor-pointer"
+                                aria-label="Корзина"
+                            >
+                                <CgShoppingCart className="w-6 h-6" />
+                                {totalItems > 0 && (
+                                    <span className="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                                        {totalItems}
+                                    </span>
+                                )}
+                            </button>
+                        </li>
+                    )}
+
                     <li className="text-xl hover:text-indigo-600">
-                        <button
-                            onClick={openCart}
-                            className="relative p-2 text-gray-700 hover:text-indigo-600 cursor-pointer"
-                            aria-label="Корзина"
-                        >
-                            <CgShoppingCart className="w-6 h-6" />
-                            {totalItems > 0 && (
-                                <span className="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                                    {totalItems}
-                                </span>
-                            )}
-                        </button>
+                        {isAuthenticated ? (
+                            <button
+                                className=" bg-red-700 rounded-md text-white p-2 cursor-pointer flex items-center gap-2"
+                                onClick={logout}
+                            >
+                                <BiLogOut className="w-6 h-6" />
+                            </button>
+                        ) : (
+                            <Link href={'/auth'}>Вход</Link>
+                        )}
                     </li>
                 </ul>
             </div>

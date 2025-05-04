@@ -71,7 +71,6 @@ export const TeamSlider: React.FC = () => {
     const slidesToShow = 3;
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Группируем участников по 3
     const groups = useMemo(() => {
         const arr: Member[][] = [];
         for (let i = 0; i < members.length; i += slidesToShow) {
@@ -118,8 +117,6 @@ export const TeamSlider: React.FC = () => {
                     </div>
                 ))}
             </div>
-
-            {/* Навигационные кнопки */}
             <button
                 onClick={prevSlide}
                 className="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 z-10"
@@ -134,8 +131,6 @@ export const TeamSlider: React.FC = () => {
             >
                 <FiChevronRight className="w-6 h-6 text-gray-700" />
             </button>
-
-            {/* Индикаторы */}
             <div className="flex justify-center mt-6 space-x-2">
                 {groups.map((_, idx) => (
                     <button

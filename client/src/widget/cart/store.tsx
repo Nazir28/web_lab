@@ -27,8 +27,6 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
-
-    // Загрузка из localStorage при монтировании
     useEffect(() => {
         const savedCart = localStorage.getItem('cart');
         if (savedCart) {
@@ -36,7 +34,6 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         }
     }, []);
 
-    // Сохранение в localStorage при изменении
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cartItems));
     }, [cartItems]);

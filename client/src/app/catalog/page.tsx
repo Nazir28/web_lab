@@ -5,6 +5,8 @@ import { FaHeart } from 'react-icons/fa6';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CartItem, useCart } from '@/widget/cart';
+import { useAuth } from '@/widget/auth';
+import { useRouter } from 'next/navigation';
 
 export interface Product {
     id: number;
@@ -25,6 +27,8 @@ export default function Catalog() {
     const [selectedCategory, setSelectedCategory] = useState('Все');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const { isAuthenticated } = useAuth();
+    const router = useRouter();
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -51,13 +55,17 @@ export default function Catalog() {
     const { addToCart, openCart } = useCart();
 
     const handleAddToCart = (product: CartItem) => {
-        addToCart({
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            image: product.image,
-        });
-        openCart();
+        if (isAuthenticated) {
+            addToCart({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+            });
+            openCart();
+        } else {
+            router.push('/auth');
+        }
     };
 
     if (loading) return <div className="text-center py-20">Загрузка...</div>;
@@ -96,7 +104,6 @@ export default function Catalog() {
                 </div>
             </div>
 
-            {/* Сетка товаров */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {products.map((product) => (
                     <div
